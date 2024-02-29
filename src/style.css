@@ -150,6 +150,7 @@ button:hover {
 .credit {
   margin: 20px auto;
   font-size: 12px;
+  z-index: 1;
 }
 
 .credit a {
