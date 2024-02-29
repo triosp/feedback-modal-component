@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Feedback Modal Component - FrontendPro Challenge</title>
+  </head>
+  <body>
+    <!-- Write your HTML here -->
+    <div class="container">
+      <div class="backdoor"></div>
+      <div class="show-feed active">
+        <button onclick="showLayout(feedback,showFeed,backdoor)">
+          Give Feedback 🎯
+        </button>
+      </div>
+      <div class="feedback">
+        <h1>
+          How likely are you to recommend FrontendPro <br />to someone you know?
+        </h1>
+        <button class="close" onclick="showLayout(showFeed,feedback)">✖</button>
+        <div class="score">
+          <button value="1">1</button><button value="2">2</button
+          ><button value="3">3</button><button value="4">4</button
+          ><button value="5">5</button><button value="6">6</button
+          ><button value="7">7</button><button value="8">8</button
+          ><button value="9">9</button><button value="10">10</button>
+        </div>
+        <div class="text">
+          <p>not likely at all</p>
+          <p>Extremely Likely</p>
+        </div>
+        <div class="btn">
+          <button id="submit">Submit</button>
+          <button class="cancel" onclick="showLayout(showFeed,feedback)">
+            Cancel
+          </button>
+        </div>
+      </div>
+      <div class="thanks">
+        <h1>Thanks for your Feedback 😊😍</h1>
+        <h3 id="ratings">your rate is 3</h3>
+        <br />
+        <button onclick="showLayout(showFeed,thanks)">Back</button>
+      </div>
+    </div>
+    <script src="./src/script.js"></script>
+  </body>
+</html>

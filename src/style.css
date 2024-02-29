@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* write your CSS here */
+body {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1440px;
+}
+
+button {
+  background-color: #7a58f4;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #7a58f4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #1a2036;
+}
+
+.show-feed,
+.thanks,
+.feedback {
+  padding: 2em;
+  margin: 1.5em;
+  text-align: center;
+  display: none;
+}
+
+.thanks,
+.feedback {
+  background-color: #1a1832;
+  border-radius: 10px;
+}
+
+.show-feed.active,
+.thanks.active,
+.backdoor.active {
+  display: block;
+}
+
+.backdoor {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #d0cbf3;
+  display: none;
+}
+
+.feedback.active {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 3rem;
+  position: relative;
+}
+
+.feedback.active .close {
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.feedback.active .score {
+  margin: 1.6rem auto;
+}
+
+.feedback.active .score button {
+  font-size: 24px;
+  color: #b1b9d8;
+  background-color: #1a2036;
+  border: 1px solid #2e3650;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  width: 60px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.feedback.active .score button:hover,
+.feedback.active .score button:focus {
+  border: 1px solid #b1b9d8;
+}
+
+.feedback.active .text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  margin-left: 10px;
+  padding: 0 1em;
+  color: #fff;
+  gap: 1em;
+}
+
+.feedback.active .btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 1rem 0.5rem;
+}
+
+.feedback.active .btn .cancel {
+  background-color: #1a2036;
+}
+
+.feedback.active .btn .cancel:hover {
+  background-color: #7a58f4;
+}
+
+.thanks h3 {
+  color: #7a58f4;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .feedback.active .btn {
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
